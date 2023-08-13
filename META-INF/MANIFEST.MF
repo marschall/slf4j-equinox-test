@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: com.github.marschall.slf4j-equinox-test;singleton:=true
+Bundle-Version: 2.0.0.qualifier
+Bundle-Vendor: %providerName
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Localization: plugin
+Bundle-Copyright: Copyright (c) Philippe Marschall (2012, 2023). All Rights Reserved.
+Bundle-License: EPL-2.0;
+ description="Eclipse Public License, Version 2.0";
+ link="https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+Import-Package: org.junit.jupiter.api;version="[5.0.0,6.0.0)",
+ org.slf4j;version="[2.0.0,3.0.0)"
+Provide-Capability: osgi.serviceloader;osgi.serviceloader=org.slf4j.impl.EquinoxSLF4JServiceProvider
+Require-Capability: osgi.extender;filter:="(osgi.extender=osgi.serviceloader.registrar)"
